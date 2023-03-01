@@ -18,14 +18,14 @@ int[] GetArray(int size, int minValue,int maxValue)
 int NumberArray(int[] array)
 {
     int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    foreach (int elements in array) //for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0) result++;
+        if (elements % 2 == 0) result++; //if (array[i] % 2 == 0) result++;
     }
     return result;
 }
 
-int[] array = GetArray(4, 400, 4000);
+int[] array = GetArray(4, 100, 1000);
 Console.Write(String.Join(", ", array));
 
 int result = NumberArray(array);
